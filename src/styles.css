@@ -1,0 +1,141 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: #333;
+}
+
+header {
+    background-color: #ffffff; /* Match the background color of the body */
+    color: #333; /* Set the text color */
+    /* padding: 20px 0; */
+    padding-top: 35px;
+    padding-bottom: 30px;
+    text-align: left;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    padding-left: 15px;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+    font-weight: 10;
+    margin: 0 5px;
+}
+
+header nav ul li a {
+    color: #333; /* Set the link color */
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+main {
+    padding-left: 20px; /* Make padding consistent */
+    padding-right: 20px; /* Ensure consistent padding on both sides */
+}
+
+main h1 {
+    font-weight: 550;
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+main p {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.0;
+    line-height: 2; /* Increase line spacing for paragraphs */
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+
+@media (min-width: 1200px) {
+    main {
+        max-width: 700px; /* Limit the width for large screens */
+        margin: 0 auto; /* Center the content */
+        padding-left: 20px; /* Maintain some padding on the left */
+        padding-right: 20px;
+    }
+
+    header {
+        max-width: 600px;
+        margin: 0 auto;
+        padding-right: 140px;
+    }
+    
+    main p {
+        line-height: 2; /* Increase line spacing for paragraphs */
+    }
+}
+
+.styled-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0px 4px;
+    background-color: #f3f4f6; /* Light gray background */
+    border-radius: 4px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from the link */
+    color: #000; /* Text color */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    vertical-align: middle; /* Aligns the entire box with the middle of the text line */
+    border: 1px solid #ccc; /* Darker border color */
+    /* margin-top: 2px; */
+    font-size: 14px;
+}
+
+.styled-link .icon img {
+    width: 18px; /* Adjust this value to change the size */
+    height: 18px; /* Ensure the aspect ratio is maintained */
+    object-fit: contain; /* Ensure the image fits within the specified dimensions */
+    transition: filter 0.3s ease; /* Smooth transition for filter */
+    padding-left: 0px;
+    padding-right: 2px;
+    vertical-align:sub;
+}
+
+.styled-link:hover {
+    background-color: #000; /* Invert to black background */
+    color: #f3f4f6; /* Invert to light gray text */
+}
+
+.styled-link:hover .icon img {
+    filter: invert(100%); /* Invert the colors of the image */
+}
