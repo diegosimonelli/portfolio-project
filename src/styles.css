@@ -4,12 +4,12 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: #ffffff;
-    color: #333;
+    color: #000000;
 }
 
 header {
     background-color: #ffffff; /* Match the background color of the body */
-    color: #333; /* Set the text color */
+    color: #000000; /* Set the text color */
     /* padding: 20px 0; */
     padding-top: 35px;
     padding-bottom: 30px;
@@ -30,7 +30,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #333; /* Set the link color */
+    color: #000000; /* Set the link color */
     text-decoration: none;
     font-weight: 400;
     font-size: 15px;
@@ -110,7 +110,7 @@ form button:hover {
     align-items: center;
     padding: 0px 4px;
     background-color: #f3f4f6; /* Light gray background */
-    border-radius: 4px; /* Rounded corners */
+    border-radius: 5px; /* Rounded corners */
     text-decoration: none; /* Remove underline from the link */
     color: #000; /* Text color */
     font-weight: bold; /* Bold text */
@@ -132,10 +132,76 @@ form button:hover {
 }
 
 .styled-link:hover {
-    background-color: #000; /* Invert to black background */
+    background-color: #3a3a3a; /* Invert to black background */
     color: #f3f4f6; /* Invert to light gray text */
 }
 
 .styled-link:hover .icon img {
     filter: invert(100%); /* Invert the colors of the image */
 }
+
+.image-grid {
+    padding-bottom: 30px;
+}
+
+.image-grid img {
+    width: 50%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px; /* Optional: Rounded corners */
+    object-fit: cover; /* Ensures the images cover the entire grid cell */
+    display: block; /* Ensure the image is treated as a block-level element */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+
+.custom-underline {
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: #575656;
+    color: black;
+}
+
+.section-divider {
+    border: none; /* Remove the default border */
+    border-top: 1px solid #e0e0e0; /* Light gray line */
+    margin: 20px 0; /* Add some space above and below the line */
+    width: 100%; /* Make the line full width */
+}
+
+.work-sections {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.work-sections p {
+    margin-bottom: 16px;
+    font-size: 14.5px;
+    color: #333;
+}
+
+.work-sections ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.work-sections ul li {
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: 350;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 2px;
+    color: #000;
+    font-weight: 550;
+}
+
+.work-position {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 16px;
+    font-style: italic;
+}
+
