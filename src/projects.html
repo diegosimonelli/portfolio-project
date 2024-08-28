@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,11 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
     <!-- Include the header -->
@@ -27,7 +31,7 @@
         <h1>projects</h1>
         <!-- <p>Details about my projects.</p> -->
         <!-- <hr class="section-divider"> -->
-        <section id="projects">
+        <!-- <section id="projects">
             <h2>Projects</h2>
             <div class="projects-container">
                 <div class="project-card">
@@ -57,11 +61,58 @@
                         <a href="#" class="btn view-source">View Source</a>
                     </div>
                 </div>
-                <!-- Repeat for more projects -->
+               
             </div>
-        </section>
-        
-        
+        </section> -->
+
+        <div class="projects-container">
+            <div class="project">
+                <div class="project-image">
+                    <img src="musicplayer-back.png" alt="Project 1">
+                </div>
+                <div class="project-details">
+                    <h3>music player</h3>
+                    <p>Developed a music player webapp with React. The user can listen to music, skip songs and search
+                        for more songs in the gallery.</p>
+                    <div class="project-buttons">
+                        <a href="https://afterwaves.netlify.app/" target="_blank" class="btn">Live Demo</a>
+                        <a href="https://github.com/diegosimonelli/music-player" target="_blank" class="btn">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="section-divider">
+            <div class="project">
+                <div class="project-image">
+                    <img src="filesharing-back.png" alt="Project 2">
+                </div>
+                <div class="project-details">
+                    <h3>file sharing</h3>
+                    <p>Developed file sharing app with Angular and File.io api. Users can safely send documents to
+                        friends.</p>
+                    <div class="project-buttons">
+                        <a href="https://filesharingbydiego.netlify.app/" target="_blank" class="btn">Live Demo</a>
+                        <a href="https://github.com/diegosimonelli/file-sharing" target="_blank" class="btn">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="section-divider">
+            <div class="project">
+                <div class="project-image">
+                    <img src="pokedex_back.png" alt="Project 2">
+                </div>
+                <div class="project-details">
+                    <h3>pokedex</h3>
+                    <p>Developed a Pokedex application in JAVA that stores new Pokemons encountered, shows stats,
+                        evolves them generating new stats and sort names. Fully playable in command line.</p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/diegosimonelli/Pokedex" target="_blank" class="btn">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+
+
     </main>
 
     <!-- <footer>
@@ -69,4 +120,5 @@
     </footer> -->
 
 </body>
+
 </html>
