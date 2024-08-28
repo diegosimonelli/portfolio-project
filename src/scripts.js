@@ -1,12 +1,20 @@
-// document.getElementById('contactForm').addEventListener('submit', function(e) {
-//     e.preventDefault();
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme') || 'day';
 
-//     const name = document.getElementById('name').value;
-//     const email = document.getElementById('email').value;
-//     const message = document.getElementById('message').value;
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    toggleButton.textContent = currentTheme === 'night' ? '🌜' : '🌞';
 
-//     alert(`Thank you, ${name}! Your message has been sent.`);
-
-//     // Clear the form
-//     document.getElementById('contactForm').reset();
-// });
+    toggleButton.addEventListener('click', () => {
+        let theme = document.documentElement.getAttribute('data-theme');
+        if (theme === 'night') {
+            theme = 'day';
+            toggleButton.textContent = '🌞';
+        } else {
+            theme = 'night';
+            toggleButton.textContent = '🌜';
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+    });
+});
