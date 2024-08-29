@@ -69,6 +69,10 @@
     color: white;
 }
 
+[data-theme="night"] .project-image {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.219);
+}
+
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -426,38 +430,50 @@ h3 {
     opacity: 0.8; /* Add a hover effect */
 }
 
-.logo-container {
+
+
+
+.scroll-container {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
     overflow-x: auto;
     padding: 10px 0;
     white-space: nowrap;
-    scroll-behavior: smooth; /* Optional: smooth scrolling effect */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
 }
 
-.logo-item {
-    flex: 0 0 auto; /* Prevent logos from shrinking */
-    margin-right: 16px; /* Space between logos */
-    padding: 10px;
-    background-color: #f3f4f6; /* Light background color */
-    border-radius: 8px; /* Rounded corners */
-    border: 1px solid #ccc; /* Border around logos */
-}
-
-.logo-item img {
-    max-height: 40px; /* Control the height of the logos */
-    max-width: 100%;
-}
-
-.logo-container::-webkit-scrollbar {
+.scroll-container::-webkit-scrollbar {
     height: 8px; /* Height of the scrollbar */
 }
 
-.logo-container::-webkit-scrollbar-thumb {
+.scroll-container::-webkit-scrollbar-thumb {
     background-color: #ccc; /* Scrollbar thumb color */
     border-radius: 4px;
 }
+
+.logo-item {
+    flex: 0 0 auto;
+    margin-right: 16px; /* Space between logos */
+    padding: 0; /* Remove inner padding to avoid gaps */
+    background-color: #f3f4f6;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px; /* Fixed width for each box */
+    height: 130px; /* Fixed height for each box */
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.logo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Make the image cover the entire box */
+    border-radius: inherit; /* Ensure rounded corners match the container */
+    display: block;
+}
+
+
 
 
 
@@ -483,13 +499,18 @@ h3 {
     overflow: hidden;
     width: 80%;
     height: 230px;
+    padding: 0; /* Ensure no padding */
+    margin: 0; /* Ensure no margin */
+    object-fit: cover;
+    border: 1px solid #ccc;
 }
   
 .project-image img {
     width: 100%;
-    height: 230px;
+    height: 100%; /* Ensure it covers the entire container */
     display: block;
     object-fit: cover;
+    margin: 0; /* Ensure no margin on the image */
 }
   
 .project-details {
@@ -544,9 +565,13 @@ h3 {
 
 @media screen and (min-width: 769px) {
     .projects-container {
-        grid-template-columns: repeat(3, 1fr); /* Three columns on larger screens */
+        grid-template-columns: repeat(2, 1fr); /* Three columns on larger screens */
     }
     .section-divider {
         display: none; /* Hide the divider on medium screens */
+    }
+    .project-buttons {
+        padding-left: 30px;
+        margin-top: 10px;
     }
 }
