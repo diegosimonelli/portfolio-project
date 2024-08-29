@@ -73,9 +73,9 @@
     color: white;
 }
 
-[data-theme="night"] .project-image {
+/* [data-theme="night"] .project-image {
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.219);
-}
+} */
 
 body {
     font-family: 'Inter', sans-serif;
@@ -287,6 +287,7 @@ form button:hover {
     text-decoration: underline;
     text-decoration-color: #575656;
     color: black;
+    text-underline-offset: 3px; /* Adjust the value to control the underline position */
 }
 
 .section-divider {
@@ -512,7 +513,7 @@ h3 {
 .project-image {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     overflow: hidden;
     width: 80%;
     height: 230px;
