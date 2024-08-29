@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!isDown) return;
         e.preventDefault();
         const x = e.pageX - container.offsetLeft;
-        const walk = (x - startX) * 1.5; // Adjust the scroll speed for smoothness
+        const walk = (x - startX) * 4.5; // Adjust the scroll speed for smoothness
         container.scrollLeft = scrollLeft - walk;
     });
 });
