@@ -257,7 +257,7 @@ form button:hover {
 }
 
 .image-grid img {
-    width: 50%;
+    width: 250px;
     max-width: 400px;
     height: auto;
     border-radius: 8px; /* Optional: Rounded corners */
