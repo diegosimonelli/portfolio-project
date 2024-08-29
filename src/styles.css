@@ -18,6 +18,10 @@
     --header-background: #121212;
 }
 
+[data-theme="night"] main h3 {
+    color: white;
+}
+
 [data-theme="night"] .work-sections p {
     color: white;
 }
@@ -157,6 +161,10 @@ main p {
     line-height: 2; /* Increase line spacing for paragraphs */
 }
 
+main h3 {
+    padding-top: 20px;
+}
+
 
 form {
     display: flex;
@@ -245,12 +253,28 @@ form button:hover {
 
 .image-grid {
     padding-bottom: 30px;
+    padding-top: 15px;
 }
 
 .image-grid img {
     width: 50%;
     max-width: 400px;
     height: auto;
+    border-radius: 8px; /* Optional: Rounded corners */
+    object-fit: cover; /* Ensures the images cover the entire grid cell */
+    display: block; /* Ensure the image is treated as a block-level element */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.image-grid-graduation {
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.image-grid-graduation img {
+    width: 400px;
+    max-width: 400px;
+    height: 250px;
     border-radius: 8px; /* Optional: Rounded corners */
     object-fit: cover; /* Ensures the images cover the entire grid cell */
     display: block; /* Ensure the image is treated as a block-level element */
@@ -430,9 +454,6 @@ h3 {
     opacity: 0.8; /* Add a hover effect */
 }
 
-
-
-
 .scroll-container {
     display: flex;
     overflow-x: auto;
@@ -472,10 +493,6 @@ h3 {
     border-radius: inherit; /* Ensure rounded corners match the container */
     display: block;
 }
-
-
-
-
 
 .projects-container {
     display: grid;
