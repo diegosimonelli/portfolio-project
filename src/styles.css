@@ -73,6 +73,20 @@
     color: white;
 }
 
+[data-theme="night"] .section-divider {
+    border: none; /* Remove the default border */
+    border-top: 1px solid #555; /* Light gray line */
+    margin: 20px 0; /* Add some space above and below the line */
+    width: 100%; /* Make the line full width */
+}
+
+[data-theme="night"] .section-divider-nav {
+    border: none; /* Remove the default border */
+    border-top: 1px solid #555; /* Light gray line */
+    margin: 0 0; /* Add some space above and below the line */
+    width: 100%; /* Make the line full width */
+}
+
 /* [data-theme="night"] .project-image {
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.219);
 } */
@@ -129,8 +143,8 @@ header nav ul li a {
 }
 
 #theme-toggle img {
-    width: 22px; /* Adjust the size of the icon */
-    height: 22px;
+    width: 20px; /* Adjust the size of the icon */
+    height: 20px;
     transition: filter 0.3s ease; /* Smooth transition for color inversion */
 }
 
@@ -294,6 +308,13 @@ form button:hover {
     border: none; /* Remove the default border */
     border-top: 1px solid #e0e0e0; /* Light gray line */
     margin: 20px 0; /* Add some space above and below the line */
+    width: 100%; /* Make the line full width */
+}
+
+.section-divider-nav {
+    border: none; /* Remove the default border */
+    border-top: 1px solid #e0e0e0; /* Light gray line */
+    margin: 0 0; /* Add some space above and below the line */
     width: 100%; /* Make the line full width */
 }
 
@@ -544,7 +565,7 @@ h3 {
 }
   
 .project-details {
-    margin-top: -5px; /* Overlap effect */
+    margin-top: -10px; /* Overlap effect */
     background-color: transparent;
     padding: 10px;
     margin-bottom: -30px;
@@ -581,8 +602,6 @@ h3 {
     font-weight: bold;
     font-size: 14px;
 }
-
-
   
 @media screen and (min-width: 600) and (max-width: 768px) {
     .projects-container {
@@ -591,6 +610,7 @@ h3 {
     .section-divider {
         display: none; /* Hide the divider on larger screens */
     }
+    
 }
 
 @media screen and (min-width: 769px) {
@@ -604,4 +624,26 @@ h3 {
         padding-left: 30px;
         margin-top: 10px;
     }
+    #theme-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 20px; /* Adjust the size of the icon */
+        color: var(--text-color); /* Match the text color */
+        padding-right: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        float:right;
+        margin-right: -25%;
+    }
+
+    .project-details {
+        margin-top: -10px; /* Overlap effect */
+        background-color: transparent;
+        padding: 10px;
+        margin-bottom: -5px;
+
+    }
+    
 }
