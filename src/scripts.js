@@ -1,27 +1,49 @@
 document.addEventListener('DOMContentLoaded', function () {
     const toggleButton = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
-    const currentTheme = localStorage.getItem('theme') || 'day';
+    
+    // Function to apply the theme
+    function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        themeIcon.src = theme === 'night' ? 'night-mode.png' : 'light-mode.png';
+        localStorage.setItem('theme', theme);
+    }
 
-    document.documentElement.setAttribute('data-theme', currentTheme);
+    // Detect stored theme or system preference
+    const storedTheme = localStorage.getItem('theme');
+    const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // Set theme based on stored preference or system preference
+    if (storedTheme) {
+        applyTheme(storedTheme);
+    } else if (userPrefersDark) {
+        applyTheme('night');
+    } else {
+        applyTheme('day');
+    }
 
-    // Set the correct icon based on the current theme
-    themeIcon.src = currentTheme === 'night' ? 'night-mode.png' : 'light-mode.png';
-
+    // Add event listener for the toggle button
     toggleButton.addEventListener('click', () => {
         let theme = document.documentElement.getAttribute('data-theme');
         if (theme === 'night') {
-            theme = 'day';
-            themeIcon.src = 'light-mode.png';
+            applyTheme('day');
         } else {
-            theme = 'night';
-            themeIcon.src = 'night-mode.png';
+            applyTheme('night');
         }
-        document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
     });
 
+    // Listen for system theme changes and adjust accordingly
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        const newColorScheme = e.matches ? 'night' : 'day';
+        const storedTheme = localStorage.getItem('theme');
 
+        // Only change the theme automatically if the user hasn't manually set it
+        if (!storedTheme) {
+            applyTheme(newColorScheme);
+        }
+    });
+
+    // Auto-scroll container functionality (unchanged)
     const container = document.getElementById('auto-scroll-container');
     let isDown = false;
     let startX;
