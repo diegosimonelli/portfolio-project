@@ -30,94 +30,130 @@
         </nav>
     </header>
 
-    <main>
+    <main class="projects-page">
         <hr class="section-divider-nav">
-        <h1>my projects</h1>
-        <div class="projects-container" id="portfolio">
-            <div class="project">
-                <div class="project-image">
-                    <img src="portfolio_back.png" alt="Project 2">
-                </div>
-                <div class="project-details">
+        <section class="projects-hero" aria-labelledby="projects-title">
+            <h1 id="projects-title">my projects</h1>
+            <p>Personal projects built to practice frontend, backend, and problem-solving skills through small, focused software builds.</p>
+        </section>
+
+        <div class="projects-grid">
+            <article class="project-card" id="portfolio">
+                <div class="project-card-body">
+                    <div class="project-card-topline">
+                        <span>01</span>
+                        <span>Frontend</span>
+                    </div>
                     <h3>Portfolio</h3>
-                    <p>Developed a personal website for my portfolio using JavaScript, HTML and CSS.</p>
+                    <p>Personal portfolio website built with HTML, CSS, and JavaScript to showcase my work, projects, and professional background.</p>
+                    <div class="tech-tags" aria-label="Portfolio tech stack">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
                     <div class="project-buttons">
-                        <a href="https://diegosimonelli.com/" target="_blank" class="btn">Live Demo</a>
-                        <a href="https://github.com/diegosimonelli/portfolio-project" target="_blank" class="btn">GitHub</a>
+                        <a href="https://diegosimonelli.com/" target="_blank" rel="noopener" class="btn btn-primary">Live Demo</a>
+                        <a href="https://github.com/diegosimonelli/portfolio-project" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
                     </div>
                 </div>
-            </div>
-            <hr class="section-divider" id="musicPlayer">
-            <div class="project">
-                <div class="project-image">
-                    <img src="musicplayer-back.png" alt="Project 1">
-                </div>
-                <div class="project-details">
+            </article>
+
+            <article class="project-card" id="musicPlayer">
+                <div class="project-card-body">
+                    <div class="project-card-topline">
+                        <span>02</span>
+                        <span>React</span>
+                    </div>
                     <h3>Music Player</h3>
-                    <p>Developed a music player webapp with React. The user can listen to music, skip songs and search
-                        gallery songs.</p>
+                    <p>React music player app with playback controls, song browsing, and a clean interface for listening to tracks.</p>
+                    <div class="tech-tags" aria-label="Music Player tech stack">
+                        <span>React</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
                     <div class="project-buttons">
-                        <a href="https://afterwaves.netlify.app/" target="_blank" class="btn">Live Demo</a>
-                        <a href="https://github.com/diegosimonelli/music-player" target="_blank" class="btn">GitHub</a>
+                        <a href="https://afterwaves.netlify.app/" target="_blank" rel="noopener" class="btn btn-primary">Live Demo</a>
+                        <a href="https://github.com/diegosimonelli/music-player" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
                     </div>
                 </div>
-            </div>
-            <hr class="section-divider" id="fileSharing">
-            <div class="project">
-                <div class="project-image">
-                    <img src="filesharing-back.png" alt="Project 2">
-                </div>
-                <div class="project-details">
+            </article>
+
+            <article class="project-card" id="fileSharing">
+                <div class="project-card-body">
+                    <div class="project-card-topline">
+                        <span>03</span>
+                        <span>Angular</span>
+                    </div>
                     <h3>File Sharing</h3>
-                    <p>Developed file sharing app with Angular and File.io API. Users can safely send documents to
-                        friends.</p>
+                    <p>Angular file-sharing app using the File.io API, allowing users to upload and share files through temporary links.</p>
+                    <div class="tech-tags" aria-label="File Sharing tech stack">
+                        <span>Angular</span>
+                        <span>TypeScript</span>
+                        <span>File.io API</span>
+                    </div>
                     <div class="project-buttons">
-                        <a href="https://filesharingbydiego.netlify.app/" target="_blank" class="btn">Live Demo</a>
-                        <a href="https://github.com/diegosimonelli/file-sharing" target="_blank" class="btn">GitHub</a>
+                        <a href="https://filesharingbydiego.netlify.app/" target="_blank" rel="noopener" class="btn btn-primary">Live Demo</a>
+                        <a href="https://github.com/diegosimonelli/file-sharing" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
                     </div>
                 </div>
-            </div>
-            <hr class="section-divider" id="pokedex">
-            <div class="project">
-                <div class="project-image">
-                    <img src="pokedex_back.png" alt="Project 2">
-                </div>
-                <div class="project-details">
+            </article>
+
+            <article class="project-card" id="pokedex">
+                <div class="project-card-body">
+                    <div class="project-card-topline">
+                        <span>04</span>
+                        <span>Java</span>
+                    </div>
                     <h3>Pokedex</h3>
-                    <p>Developed a Pokedex app in Java that stores Pokemons, shows stats, and
-                        evolves them. Fully playable in command line.</p>
+                    <p>Java command-line Pokedex that stores Pokémon data, shows stats, and supports basic evolution logic.</p>
+                    <div class="tech-tags" aria-label="Pokedex tech stack">
+                        <span>Java</span>
+                        <span>CLI</span>
+                        <span>OOP</span>
+                    </div>
                     <div class="project-buttons">
-                        <a href="https://github.com/diegosimonelli/Pokedex" target="_blank" class="btn">GitHub</a>
+                        <a href="https://github.com/diegosimonelli/Pokedex" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
                     </div>
                 </div>
-            </div>
-            <hr class="section-divider" id="blackjackGame">
-            <div class="project">
-                <div class="project-image">
-                    <img src="blackjack_back.png" alt="Project 2">
-                </div>
-                <div class="project-details">
+            </article>
+
+            <article class="project-card" id="blackjackGame">
+                <div class="project-card-body">
+                    <div class="project-card-topline">
+                        <span>05</span>
+                        <span>Practice Project</span>
+                    </div>
                     <h3>BlackJack Game</h3>
-                    <p>Developed a Blackjack game in Java where the player must beat a bot dealer. Fully playable in command line.</p>
+                    <p>Java command-line Blackjack game where the player competes against a bot dealer.</p>
+                    <div class="tech-tags" aria-label="BlackJack Game tech stack">
+                        <span>Java</span>
+                        <span>CLI</span>
+                        <span>Game Logic</span>
+                    </div>
                     <div class="project-buttons">
-                        <a href="https://github.com/diegosimonelli/BlackJack" target="_blank" class="btn">GitHub</a>
+                        <a href="https://github.com/diegosimonelli/BlackJack" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
                     </div>
                 </div>
-            </div>
-            <hr class="section-divider" id="characterSorter">
-            <div class="project">
-                <div class="project-image">
-                    <img src="charsorter_back.png" alt="Project 2">
-                </div>
-                <div class="project-details">
+            </article>
+
+            <article class="project-card" id="characterSorter">
+                <div class="project-card-body">
+                    <div class="project-card-topline">
+                        <span>06</span>
+                        <span>Algorithms</span>
+                    </div>
                     <h3>Character Sorter</h3>
-                    <p>Developed a Character frequency count project in Java that reads, analyzes and sort a string to the user.</p>
+                    <p>Java program that analyzes a string, counts character frequency, and sorts the results.</p>
+                    <div class="tech-tags" aria-label="Character Sorter tech stack">
+                        <span>Java</span>
+                        <span>CLI</span>
+                        <span>Algorithms</span>
+                    </div>
                     <div class="project-buttons">
-                        <a href="https://github.com/diegosimonelli/CharacterSorter" target="_blank" class="btn">GitHub</a>
+                        <a href="https://github.com/diegosimonelli/CharacterSorter" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
                     </div>
                 </div>
-            </div>
-            <!-- Add more projects as needed -->
+            </article>
         </div>
 
 
