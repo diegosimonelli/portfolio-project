@@ -43,35 +43,66 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Auto-scroll container functionality (unchanged)
-    const container = document.getElementById('auto-scroll-container');
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+    const projectPreview = document.querySelector('[data-project-preview]');
+    if (projectPreview) {
+        syncProjectPreview(projectPreview);
+    }
 
-    container.addEventListener('mousedown', (e) => {
-        isDown = true;
-        container.classList.add('active');
-        startX = e.pageX - container.offsetLeft;
-        scrollLeft = container.scrollLeft;
-        e.preventDefault(); // Prevent default behavior to avoid text selection
-    });
+    async function syncProjectPreview(projectPreview) {
+        try {
+            const response = await fetch('projects.html');
+            if (!response.ok) return;
 
-    container.addEventListener('mouseleave', () => {
-        isDown = false;
-        container.classList.remove('active');
-    });
+            const html = await response.text();
+            const doc = new DOMParser().parseFromString(html, 'text/html');
+            const projects = Array.from(doc.querySelectorAll('.projects-grid .project-card[id]'));
 
-    container.addEventListener('mouseup', () => {
-        isDown = false;
-        container.classList.remove('active');
-    });
+            if (!projects.length) return;
 
-    container.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - container.offsetLeft;
-        const walk = (x - startX) * 4.5; // Adjust the scroll speed for smoothness
-        container.scrollLeft = scrollLeft - walk;
-    });
+            projectPreview.replaceChildren(...projects.map((project, index) => {
+                const card = document.createElement('article');
+                card.className = 'project-card';
+
+                const body = document.createElement('div');
+                body.className = 'project-card-body';
+
+                const topline = project.querySelector('.project-card-topline')?.cloneNode(true) || document.createElement('div');
+                topline.className = 'project-card-topline';
+
+                if (!topline.children.length) {
+                    const number = document.createElement('span');
+                    number.textContent = String(index + 1).padStart(2, '0');
+
+                    const category = document.createElement('span');
+                    category.textContent = 'Project';
+
+                    topline.append(number, category);
+                }
+
+                const sourceTitle = project.querySelector('h3, h4');
+                const title = document.createElement('h4');
+                title.textContent = sourceTitle ? sourceTitle.textContent : 'Project';
+
+                const sourceDescription = project.querySelector('p');
+                const description = document.createElement('p');
+                description.textContent = sourceDescription ? sourceDescription.textContent : '';
+
+                const tags = project.querySelector('.tech-tags')?.cloneNode(true);
+                const link = document.createElement('a');
+                link.className = 'text-link';
+                link.href = `projects.html#${project.id}`;
+                link.textContent = 'View details';
+
+                body.append(topline, title, description);
+                if (tags) body.append(tags);
+                body.append(link);
+                card.append(body);
+
+                return card;
+            }));
+        } catch {
+            return;
+        }
+    }
+
 });

@@ -44,49 +44,118 @@
         </div>
         <h3>explore my work</h3>
         <p>Curious about my professional journey? Head over to my <a href="work.html" class="styled-link"> <span class="icon"><img src="resume-icon.png" alt="Resume Icon"></span>work</a> page to see where I've been and what I've accomplished. From cutting-edge projects to team collaborations, you'll get a glimpse of the experiences that have shaped my career.</p>
-        <h3>dive into my projects</h3>
-        <p>Check out the <a href="projects.html" class="styled-link"> <span class="icon"><img src="project.png" alt="Project Icon"></span>Projects</a> page to explore a showcase of my most significant work. Here, you'll find a collection of personal projects that highlight my skills and creativity in action. Each project tells a story of innovation and learning.</p>
-        <div class="scroll-container" id="auto-scroll-container">
-            <div class="logo-item">
-                <a href="projects.html#portfolio">
-                    <img src="portfolio_back.png" alt="Linear">
-                </a>
+        <section class="featured-projects" aria-labelledby="featured-projects-title">
+            <h3 id="featured-projects-title">dive into my projects</h3>
+            <p>Check out the <a href="projects.html" class="styled-link"> <span class="icon"><img src="project.png" alt="Project Icon"></span>Projects</a> page to explore a showcase of my most significant work. Here, you'll find a collection of personal projects that highlight my skills and creativity in action. Each project tells a story of innovation and learning.</p>
+            <div class="featured-project-grid" data-project-preview>
+                <article class="project-card">
+                    <div class="project-card-body">
+                        <div class="project-card-topline">
+                            <span>01</span>
+                            <span>Portfolio</span>
+                        </div>
+                        <h4>Portfolio</h4>
+                        <p>Personal site for showcasing my work, projects, and background.</p>
+                        <div class="tech-tags" aria-label="Portfolio tech stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="projects.html#portfolio" class="text-link">View details</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-card-body">
+                        <div class="project-card-topline">
+                            <span>02</span>
+                            <span>React</span>
+                        </div>
+                        <h4>Music Player</h4>
+                        <p>React app with playback controls, browsing, and a clean listening interface.</p>
+                        <div class="tech-tags" aria-label="Music Player tech stack">
+                            <span>React</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="projects.html#musicPlayer" class="text-link">View details</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-card-body">
+                        <div class="project-card-topline">
+                            <span>03</span>
+                            <span>Angular</span>
+                        </div>
+                        <h4>File Sharing</h4>
+                        <p>Angular app for uploading files and sharing temporary links.</p>
+                        <div class="tech-tags" aria-label="File Sharing tech stack">
+                            <span>Angular</span>
+                            <span>API</span>
+                            <span>TypeScript</span>
+                        </div>
+                        <a href="projects.html#fileSharing" class="text-link">View details</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-card-body">
+                        <div class="project-card-topline">
+                            <span>04</span>
+                            <span>Java</span>
+                        </div>
+                        <h4>Pokedex</h4>
+                        <p>Java command-line Pokedex with Pokémon stats and evolution logic.</p>
+                        <div class="tech-tags" aria-label="Pokedex tech stack">
+                            <span>Java</span>
+                            <span>CLI</span>
+                            <span>OOP</span>
+                        </div>
+                        <a href="projects.html#pokedex" class="text-link">View details</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-card-body">
+                        <div class="project-card-topline">
+                            <span>05</span>
+                            <span>Practice Project</span>
+                        </div>
+                        <h4>BlackJack Game</h4>
+                        <p>Java command-line Blackjack game against a bot dealer.</p>
+                        <div class="tech-tags" aria-label="BlackJack Game tech stack">
+                            <span>Java</span>
+                            <span>CLI</span>
+                            <span>Game Logic</span>
+                        </div>
+                        <a href="projects.html#blackjackGame" class="text-link">View details</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-card-body">
+                        <div class="project-card-topline">
+                            <span>06</span>
+                            <span>Algorithms</span>
+                        </div>
+                        <h4>Character Sorter</h4>
+                        <p>Java program that counts character frequency and sorts results.</p>
+                        <div class="tech-tags" aria-label="Character Sorter tech stack">
+                            <span>Java</span>
+                            <span>CLI</span>
+                            <span>Algorithms</span>
+                        </div>
+                        <a href="projects.html#characterSorter" class="text-link">View details</a>
+                    </div>
+                </article>
             </div>
-            <div class="logo-item">
-                <a href="projects.html#musicPlayer">
-                    <img src="musicplayer-back.png" alt="Supabase">
-                </a>
-            </div>
-            <div class="logo-item">
-                <a href="projects.html#fileSharing">
-                    <img src="filesharing-back.png" alt="Resend">
-                </a>
-            </div>
-            <div class="logo-item">
-                <a href="projects.html#pokedex">
-                    <img src="pokedex_back.png" alt="Makeswift">
-                </a>
-            </div>
-            <div class="logo-item">
-                <a href="projects.html#blackjackGame">
-                    <img src="blackjack_back.png" alt="Makeswift">
-                </a>
-            </div>
-            <div class="logo-item">
-                <a href="projects.html#characterSorter">
-                    <img src="charsorter_back.png" alt="Makeswift">
-                </a>
-            </div>
-            <!-- Add more logos as needed -->
-        </div>
+            <a href="projects.html" class="project-section-link">View all projects</a>
+        </section>
         <h3>get in touch</h3>
         <p>I'm always open to collaborations. Whether you have a question, a project in mind, or just want to connect, feel free to follow me on my socials 
-            <a href="https://www.linkedin.com/in/diego-simonelli/" target="_blank" class="styled-link"> <span class="icon"><img src="linkedin.png" alt="Contact Icon"></span>LinkedIn</a>, 
-            <a href="https://www.instagram.com/diegosimonelli/" target="_blank" class="styled-link"> <span class="icon"><img src="instagram.png" alt="Contact Icon"></span>Instagram</a> and 
+            <a href="https://www.linkedin.com/in/diego-simonelli/" target="_blank" class="styled-link"> <span class="icon"><img src="linkedin.png" alt="Contact Icon"></span>LinkedIn</a>,
+            <a href="https://www.instagram.com/diegosimonelli/" target="_blank" class="styled-link"> <span class="icon"><img src="instagram.png" alt="Contact Icon"></span>Instagram</a> and
             <a href="https://x.com/diegosimonelli" target="_blank" class="styled-link"> <span class="icon"><img src="twitter.png" alt="Contact Icon"></span>X</a>. Let's build something great together!</p>
         <hr class="section-divider">
         <p>For the extra daring, you can visit me on 
             <a href="https://github.com/diegosimonelli" target="_blank" class="styled-link"> <span class="icon"><img src="github.png" alt="Contact Icon"></span>Github</a>.
+        </p>
         <!-- <p>This site contains my 
             <a href="work.html" class="styled-link"> <span class="icon"><img src="resume-icon.png" alt="Resume Icon"></span>Resume</a>, a list of 
             <a href="projects.html" class="styled-link"> <span class="icon"><img src="project.png" alt="Project Icon"></span>Projects</a> I have worked on and my 
