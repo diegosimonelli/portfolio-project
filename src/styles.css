@@ -700,3 +700,46 @@ h3 {
         gap: 14px;
     }
 }
+
+.earlier-work {
+    border-top: 1px solid var(--border-color);
+    margin: 0 0 52px;
+    padding-top: 22px;
+}
+
+.earlier-work h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.earlier-work > p {
+    color: var(--muted-text-color);
+    font-size: 14px;
+    margin: 6px 0 12px;
+}
+
+.earlier-work-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.earlier-work-list li {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 6px 0;
+}
+
+.earlier-work-list a {
+    color: var(--text-color);
+    font-weight: 550;
+    min-width: 130px;
+}
+
+.earlier-work-list span {
+    color: var(--muted-text-color);
+}
